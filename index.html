@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="./CSS/main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./CSS/mainPage.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./CSS/loadingPage.css" type="text/css" media="all">
+  </head>
+  <body>
+    <div id="loadingPage" class="current">
+      <p>
+        <span id="loadingTitle">THE APP IS LOADING</span>
+        <br/>
+        <span id="statusLine">
+          <!-- here, loading info is set, by Init functions called in
+            renderer.js -->
+        </span>
+      </p>
+      <div class="loader">
+        <!-- this homie spin...-->
+        spinner
+      </div>
+    </div>
+    <div id="mainPage" class="hidden">
+      <aside>
+        <div id="toolbar">
+        <!-- toools will be loaded here when toolbar.Init is called in renderer.js-->
+        </div>
+      </aside>
+      <main>
+        <div id="main">
+          <canvas id="mainCanvas">
+          </canvas>
+        </div>
+      </main>
+      </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

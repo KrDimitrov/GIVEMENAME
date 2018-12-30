@@ -1,0 +1,47 @@
+/* this is the css filfe for the mainPage <div id="mainPage"> */
+
+
+#mainPage {
+  display: grid;
+  grid-template-columns: minmax(100px, 170px) auto;
+  grid-template-rows: 100%;
+  height: 100%;
+}
+
+
+/* toolbar */
+aside {
+  background-color: #000;
+  height: 100%;
+  grid-column: 1;
+}
+
+aside #toolbar {
+}
+
+
+/* inverted image */
+.inverted {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+/* selected tool in the toolbar */
+#selected {
+  background-color: #1B1B1E
+}
+aside #toolbar img {
+  width: 100%;
+}
+
+/* main canvas */
+main {
+  background-color: #1B1B1E;
+}
+
+main #main {
+  grid-column: 2;
+  height: 100%;
+}
+
+main #main #mainCanvas {
+}

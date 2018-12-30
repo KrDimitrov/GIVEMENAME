@@ -1,0 +1,16 @@
+/* This is the main CSS file for the main workspace */
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+body {
+  }
+/* page management */
+.hidden {
+  display: none !important;
+}
+
+

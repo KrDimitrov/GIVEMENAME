@@ -1,0 +1,12 @@
+[
+  {
+    "name": "resistor",
+    "imgPath": "./IMG/tools/resistor.png",
+    "imgInverted": true
+  },
+  {
+    "name": "diode",
+    "imgPath": "./IMG/tools/diode.svg",
+    "imgInverted": true
+  }
+]
