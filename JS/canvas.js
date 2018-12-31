@@ -35,6 +35,7 @@ function drawComponents(){
     if(component.imgInverted){
       invertComponentImg(component);
     }
+    component.drawn = true;
   });
 }
 
