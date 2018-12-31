@@ -33,23 +33,26 @@ function drawComponents(){
     if(component.drawn) return;
     ctx.drawImage(component.imgElement, component.x, component.y);
     if(component.imgInverted){
-      var data = ctx.getImageData(component.x, component.y,
-        component.imgElement.width, component.imgElement.height);
-      console.log("data before\n");
-      console.log(data);
-      for(var i = 0; i < data.data.length; i += 4) {
-        // red
-        data.data[i] = 255 - data.data[i];
-        // green
-        data.data[i + 1] = 255 - data.data[i + 1];
-        // blue
-        data.data[i + 2] = 255 - data.data[i + 2];
-      }
-      ctx.putImageData(data, component.x, component.y);
-      console.log(data);
+      invertComponentImg(component);
     }
   });
 }
+
+// inverts the image of the passed component
+function invertComponentImg(component) {
+  var data = ctx.getImageData(component.x, component.y,
+    component.imgElement.width, component.imgElement.height);
+  for(var i = 0; i < data.data.length; i += 4) {
+    // red
+    data.data[i] = 255 - data.data[i];
+    // green
+    data.data[i + 1] = 255 - data.data[i + 1];
+    // blue
+    data.data[i + 2] = 255 - data.data[i + 2];
+  }
+  ctx.putImageData(data, component.x, component.y);
+}
+
 
 module.exports = {
   addComponent
