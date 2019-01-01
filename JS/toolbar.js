@@ -25,7 +25,6 @@ function Init(){
     div.appendChild(img);
     toolbar.appendChild(div);
   });
-
 }
 
 function componentClicked(event){

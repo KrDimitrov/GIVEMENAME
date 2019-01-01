@@ -1,8 +1,8 @@
 [
   {
     "name": "resistor",
-    "imgPath": "./IMG/tools/resistor.png",
-    "imgInverted": true
+    "imgPath": "./IMG/tools/Resistor-Circuit-Symbol.jpg",
+    "imgInverted": false
   },
   {
     "name": "diode",

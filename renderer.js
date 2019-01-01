@@ -5,7 +5,7 @@
 var filesystem = require('./JS/filesystem.js');
 var toolbar = require('./JS/toolbar.js');
 var pagesystem = require('./JS/pagesystem.js');
-
+var canvasController = require('./JS/canvas.js');
 document.getElementById("statusLine").innerHTML = "Initializing Filesystem...";
 
 filesystem.Init(() => filesystemInitialized());
@@ -22,4 +22,5 @@ function filesystemInitialized() {
 function doneLoading(){
   document.getElementById("statusLine").innerHTML = "Done!";
   pagesystem.switchToPage("mainPage");
+  canvasController.Init();
 }
